@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Barbearia Style — estilo, precisão e personalidade.">
+  <title>Barbearia Style | Estilo e Personalidade</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: #101010;
+      border-bottom: 1px solid #292929;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #999;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .hero {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.55), rgba(0,0,0,.3)),
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1800") center/cover;
+    }
+
+    .hero-content {
+      max-width: 650px;
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      color: #aaa;
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(43px, 8vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: #aaa;
+    }
+
+    .hero p {
+      color: #ccc;
+      max-width: 480px;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 25px;
+      background: #f1f1f1;
+      color: #111;
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 1px;
+      transition: .3s;
+    }
+
+    .button:hover {
+      background: #bbb;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-title small {
+      color: #999;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 5vw, 43px);
+      margin-top: 10px;
+    }
+
+    .section-title p {
+      color: #999;
+      margin-top: 10px;
+    }
+
+    .services {
+      background: #181818;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      border: 1px solid #333;
+      padding: 30px;
+      background: #202020;
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      border-color: #aaa;
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #aaa;
+      font-size: 14px;
+      min-height: 48px;
+    }
+
+    .price {
+      display: block;
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      filter: grayscale(100%);
+    }
+
+    .about-text h2 {
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #aaa;
+      margin-bottom: 16px;
+    }
+
+    .gallery {
+      background: #181818;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: .4s;
+    }
+
+    .gallery-grid img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.02);
+    }
+
+    .contact {
+      text-align: center;
+      background: #202020;
+    }
+
+    .contact p {
+      color: #aaa;
+      margin: 12px auto 28px;
+      max-width: 500px;
+    }
+
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      background: #0b0b0b;
+      color: #777;
+      font-size: 12px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 200;
+      padding: 14px 20px;
+      border-radius: 30px;
+      background: #f5f5f5;
+      color: #111;
+      font-weight: bold;
+      font-size: 13px;
+      box-shadow: 0 5px 20px #0008;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        gap: 12px;
+        font-size: 11px;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .hero {
+        min-height: 540px;
+        background-position: center;
+      }
+
+      .service-grid,
+      .about-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        height: 300px;
+      }
+
+      .gallery-grid img {
+        height: 250px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a href="#" class="logo">BARBEARIA <span>STYLE</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Estilo em cada detalhe</div>
+
+          <h1>SEU ESTILO.<br><span>SUA IDENTIDADE.</span></h1>
+
+          <p>
+            Muito mais que um corte. Uma experiência de cuidado,
+            personalidade e confiança.
+          </p>
+
+          <a href="#contato" class="button">AGENDAR HORÁRIO</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="section-title">
+          <small>O que fazemos</small>
+          <h2>NOSSOS SERVIÇOS</h2>
+          <p>Qualidade e atenção em cada atendimento.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Corte masculino</h3>
+            <p>Cortes clássicos e modernos, com acabamento cuidadoso.</p>
+            <span class="price">R$ 35,00</span>
+          </article>
+
+          <article class="service-card">
+            <h3>Barba</h3>
+            <p>Modelagem e acabamento para valorizar seu visual.</p>
+            <span class="price">R$ 25,00</span>
+          </article>
+
+          <article class="service-card">
+            <h3>Corte + Barba</h3>
+            <p>Uma experiência completa para renovar seu estilo.</p>
+            <span class="price">R$ 55,00</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container about-grid">
+        <img
+          class="about-image"
+          src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1000"
+          alt="Atendimento em uma barbearia"
+        >
+
+        <div class="about-text">
+          <div class="eyebrow">Nossa essência</div>
+          <h2>ESTILO QUE VAI ALÉM DO ESPELHO.</h2>
+
+          <p>
+            A Barbearia Style representa uma nova forma de cuidar
+            da aparência, valorizando personalidade e autenticidade.
+          </p>
+
+          <p>
+            Um ambiente moderno, atendimento atencioso e dedicação
+            aos detalhes fazem parte da nossa proposta.
+          </p>
+
+          <a href="#contato" class="button">FALE CONOSCO</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <div class="section-title">
+          <small>Nosso ambiente</small>
+          <h2>GALERIA STYLE</h2>
+          <p>Um espaço pensado para sua experiência.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <img
+            src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800"
+            alt="Corte de cabelo masculino"
+          >
+
+          <img
+            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800"
+            alt="Ambiente de barbearia"
+          >
+
+          <img
+            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800"
+            alt="Serviço de barbearia"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="container">
+        <div class="eyebrow">Vamos conversar?</div>
+        <div class="section-title">
+          <h2>SEU PRÓXIMO VISUAL COMEÇA AQUI.</h2>
+          <p>
+            Entre em contato para consultar horários e agendar
+            seu atendimento.
+          </p>
+        </div>
+
+        <p>WhatsApp e endereço serão configurados para a barbearia.</p>
+
+        <a href="https://wa.me/5500000000000"
+           class="button">
+          CONFIGURAR AGENDAMENTO
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Barbearia Style — Projeto demonstrativo desenvolvido
+      pela Nóriva Digital.
+    </div>
+  </footer>
+
+  <a href="#contato" class="whatsapp-float">
+    AGENDAR
+  </a>
+
+</body>
+</html>
