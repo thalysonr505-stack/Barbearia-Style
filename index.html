@@ -4,9 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101010">
-<title>Barbearia Style | Estilo e personalidade</title>
-<meta name="description" content="Barbearia Style: cortes, barba e estilo com personalidade. Conheça nossa experiência.">
+<meta name="description" content="Barbearia Style — estilo, precisão e personalidade.">
+<title>Barbearia Style | Estilo e Personalidade</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,243 +13,639 @@
 
 <style>
 :root {
-  --bg:#101010;
-  --surface:#191919;
-  --gold:#c9a66b;
-  --white:#f5f3ef;
-  --muted:#aaa49b;
+  --black: #090909;
+  --dark: #111;
+  --card: #171717;
+  --gold: #c9a66b;
+  --gold-light: #e4c38b;
+  --white: #f5f2ec;
+  --muted: #aaa;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.container{width:min(1120px,90%);margin:auto}
-header{height:76px;background:#101010ee;backdrop-filter:blur(12px);position:fixed;top:0;width:100%;z-index:100;border-bottom:1px solid #ffffff12}
-.nav{height:100%;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Playfair Display',serif;font-size:25px;font-weight:800;letter-spacing:1px}
-.logo span{color:var(--gold)}
-nav{display:flex;align-items:center;gap:27px}
-nav a{font-size:13px;color:#ddd;transition:.3s}
-nav a:hover{color:var(--gold)}
-.nav-cta,.btn{background:var(--gold);color:#17130e;padding:13px 20px;border-radius:3px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.3s}
-.nav-cta:hover,.btn:hover{background:#e0bd84;transform:translateY(-2px)}
-.menu-btn{display:none;background:none;border:0;color:white;font-size:27px}
-.hero{min-height:680px;display:flex;align-items:center;padding:130px 0 80px;background:linear-gradient(90deg,#101010 0%,#101010ed 35%,#10101055 100%),url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1800') center/cover}
-.hero-content{max-width:620px}
-.eyebrow{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:22px}
-h1,h2,h3{font-family:'Playfair Display',serif}
-h1{font-size:clamp(45px,7vw,78px);line-height:1.06;margin-bottom:23px}
-h1 span,h2 span{color:var(--gold)}
-.hero p{color:#c6c2bb;line-height:1.8;max-width:480px;font-size:15px;margin-bottom:30px}
-.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
-.btn-outline{border:1px solid #ffffff66;color:white;padding:13px 20px;border-radius:3px;font-size:13px;font-weight:600}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-section{padding:90px 0}
-.section-head{text-align:center;margin-bottom:45px}
-.section-head h2{font-size:clamp(32px,5vw,46px);margin-bottom:13px}
-.section-head p{color:var(--muted);font-size:14px}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.service{background:var(--surface);padding:32px 25px;border:1px solid #ffffff10;transition:.3s}
-.service:hover{transform:translateY(-5px);border-color:#c9a66b77}
-.service .number{color:var(--gold);font-size:12px;letter-spacing:2px}
-.service h3{font-size:23px;margin:20px 0 10px}
-.service p{font-size:13px;color:var(--muted);line-height:1.7;min-height:45px}
-.price{display:block;color:var(--gold);font-size:21px;font-weight:700;margin-top:23px}
-.about{background:#171717}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-.about-img{height:440px;background:url('https://images.unsplash.com/photo- barber') center/cover}
-.about-photo{width:100%;height:440px;object-fit:cover}
-.about-text h2{font-size:43px;margin-bottom:20px}
-.about-text p{color:var(--muted);line-height:1.9;font-size:14px;margin-bottom:17px}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.gallery-grid img{width:100%;height:270px;object-fit:cover;filter:grayscale(25%);transition:.4s}
-.gallery-grid img:hover{filter:grayscale(0);transform:scale(1.02)}
-.cta{background:linear-gradient(90deg,#171717f5,#171717b0),url('https://images.unsplash.com/photo- barber') center/cover;text-align:center;padding:75px 20px}
-.cta h2{font-size:clamp(32px,5vw,48px);margin-bottom:15px}
-.cta p{color:#c5c0b8;margin-bottom:25px;font-size:14px}
-.contact{background:#171717}
-.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:35px}
-.contact-info h3{font-size:26px;margin-bottom:25px}
-.info-item{margin-bottom:23px}
-.info-item strong{display:block;color:var(--gold);font-size:12px;margin-bottom:6px}
-.info-item span{font-size:14px;color:#ddd}
-.map{width:100%;height:340px;border:0;filter:grayscale(1) contrast(.9)}
-.socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.social{padding:12px 17px;border-radius:4px;font-size:13px;font-weight:700;color:white}
-.instagram{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}
-.whatsapp{background:#168d55}
-footer{padding:27px 0;text-align:center;color:#817d76;font-size:12px;border-top:1px solid #ffffff12}
-footer span{color:var(--gold)}
-.float-wa{position:fixed;right:22px;bottom:22px;z-index:90;background:#20c66b;color:white;width:57px;height:57px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 5px 25px #0008;transition:.3s}
-.float-wa:hover{transform:scale(1.1)}
-@media(max-width:760px){
- nav{display:none;position:absolute;top:76px;left:0;width:100%;background:#151515;padding:25px 5%;flex-direction:column;align-items:flex-start;gap:22px;border-bottom:1px solid #ffffff20}
- nav.active{display:flex}
- .menu-btn{display:block}
- .nav-cta{display:none}
- .hero{min-height:620px;background-position:60% center}
- .services{grid-template-columns:1fr}
- .about-grid,.contact-grid{grid-template-columns:1fr;gap:30px}
- .about-photo{height:320px}
- .gallery-grid{grid-template-columns:repeat(2,1fr)}
- .gallery-grid img{height:190px}
- section{padding:70px 0}
- .section-head{margin-bottom:32px}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(9,9,9,.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #28231c;
+}
+
+nav {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo span { color: var(--gold); }
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.nav-links a {
+  transition: color .3s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+.menu-toggle {
+  display: none;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid #51432e;
+  padding: 7px 12px;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.62), rgba(0,0,0,.25)),
+    url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1800") center/cover;
+}
+
+.hero-content {
+  max-width: 680px;
+  padding: 110px 0;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(45px, 8vw, 82px);
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+h1 span { color: var(--gold); }
+
+.hero p {
+  max-width: 470px;
+  color: #ccc;
+  margin-bottom: 35px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 25px;
+  background: var(--gold);
+  color: #111;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  border: 1px solid var(--gold);
+  transition: .3s;
+}
+
+.button:hover {
+  background: transparent;
+  color: var(--gold);
+  transform: translateY(-3px);
+}
+
+section { padding: 95px 0; }
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title small {
+  color: var(--gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 5vw, 46px);
+  margin-top: 12px;
+}
+
+.section-title p {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.services, .gallery {
+  background: #111;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  padding: 35px 28px;
+  background: linear-gradient(145deg, #1c1c1c, #111);
+  border: 1px solid #30291f;
+  transition: .35s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--gold);
+}
+
+.service-number {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin: 15px 0 10px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 14px;
+  min-height: 50px;
+}
+
+.price {
+  display: block;
+  color: var(--gold);
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-image {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border: 1px solid #332a1e;
+}
+
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 43px);
+  line-height: 1.15;
+  margin-bottom: 22px;
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.about-text .button { margin-top: 12px; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border: 1px solid #30291f;
+  transition: .4s;
+}
+
+.gallery-grid img:hover {
+  filter: grayscale(0);
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.contact {
+  text-align: center;
+  background: linear-gradient(145deg, #17130e, #0c0c0c);
+}
+
+.contact .section-title { margin-bottom: 20px; }
+
+.contact-description {
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.social {
+  min-width: 175px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid #ffffff20;
+  transition: .3s;
+}
+
+.social svg {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
+.social:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.12);
+}
+
+.instagram {
+  background: linear-gradient(115deg, #833ab4, #c13584, #e1306c, #f77737);
+  border: none;
+}
+
+.whatsapp {
+  background: #168c55;
+  border: none;
+}
+
+.maps {
+  background: #202020;
+  border: 1px solid #51432e;
+  color: var(--gold-light);
+}
+
+footer {
+  padding: 30px 0;
+  text-align: center;
+  background: #070707;
+  color: #777;
+  font-size: 12px;
+  border-top: 1px solid #24201a;
+}
+
+.float-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.float-button {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0 5px 22px #0009;
+  transition: .3s;
+}
+
+.float-button svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
+
+.float-button:hover {
+  transform: scale(1.1);
+}
+
+.float-wa { background: #168c55; }
+.float-ig {
+  background: linear-gradient(135deg, #833ab4, #e1306c, #f77737);
+}
+
+@media (max-width: 700px) {
+  nav { position: relative; }
+  .logo { font-size: 19px; }
+  .menu-toggle { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    background: #101010;
+    border: 1px solid #30291f;
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .nav-links.active { display: flex; }
+
+  .hero { min-height: 550px; }
+  .hero-content { padding: 80px 0; }
+
+  .service-grid,
+  .about-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image { height: 320px; }
+  .gallery-grid img { height: 270px; }
+  section { padding: 70px 0; }
+
+  .social {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .float-buttons {
+    right: 14px;
+    bottom: 15px;
+  }
+
+  .float-button {
+    width: 49px;
+    height: 49px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
- <div class="container nav">
-  <a href="#inicio" class="logo">BARBEARIA <span>STYLE.</span></a>
-  <nav id="menu">
-   <a href="#inicio">Início</a>
-   <a href="#servicos">Serviços</a>
-   <a href="#sobre">Sobre</a>
-   <a href="#galeria">Galeria</a>
-   <a href="#contato">Contato</a>
+  <nav class="container">
+    <a href="#inicio" class="logo">BARBEARIA <span>STYLE</span></a>
+
+    <button class="menu-toggle"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="nav-links">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
   </nav>
-  <a class="nav-cta" href="#contato">Conheça a barbearia</a>
-  <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
- </div>
 </header>
 
 <main>
+
 <section class="hero" id="inicio">
- <div class="container hero-content">
-  <div class="eyebrow">Estilo • Precisão • Personalidade</div>
-  <h1>Seu estilo.<br>Suas <span>regras.</span></h1>
-  <p>Mais que um corte, uma experiência. Um ambiente pensado para quem valoriza estilo, cuidado e personalidade.</p>
-  <div class="hero-actions">
-   <a class="btn" href="#servicos">Conhecer serviços ↗</a>
-   <a class="btn-outline" href="#contato">Nossa localização</a>
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Estilo em cada detalhe</div>
+      <h1>SEU ESTILO.<br><span>SUA IDENTIDADE.</span></h1>
+      <p>
+        Muito mais que um corte. Uma experiência de cuidado,
+        personalidade e confiança.
+      </p>
+      <a href="#contato" class="button">CONHEÇA NOSSO ESPAÇO ↗</a>
+    </div>
   </div>
- </div>
 </section>
 
-<section id="servicos">
- <div class="container">
-  <div class="section-head">
-   <div class="eyebrow">O que fazemos</div>
-   <h2>Serviços <span>exclusivos</span></h2>
-   <p>Qualidade e atenção em cada detalhe.</p>
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-title">
+      <small>O que fazemos</small>
+      <h2>NOSSOS SERVIÇOS</h2>
+      <p>Qualidade e atenção em cada atendimento.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-number">01 / SERVIÇO</span>
+        <h3>Corte masculino</h3>
+        <p>Cortes clássicos e modernos, com acabamento cuidadoso.</p>
+        <span class="price">R$ 35,00</span>
+      </article>
+
+      <article class="service-card">
+        <span class="service-number">02 / SERVIÇO</span>
+        <h3>Barba</h3>
+        <p>Modelagem e acabamento para valorizar seu visual.</p>
+        <span class="price">R$ 25,00</span>
+      </article>
+
+      <article class="service-card">
+        <span class="service-number">03 / SERVIÇO</span>
+        <h3>Corte + Barba</h3>
+        <p>Uma experiência completa para renovar seu estilo.</p>
+        <span class="price">R$ 55,00</span>
+      </article>
+    </div>
   </div>
-  <div class="services">
-   <article class="service">
-    <span class="number">01 / CORTE</span>
-    <h3>Corte masculino</h3>
-    <p>Do clássico ao moderno, com acabamento cuidadoso.</p>
-    <span class="price">R$ 35,00</span>
-   </article>
-   <article class="service">
-    <span class="number">02 / BARBA</span>
-    <h3>Barba completa</h3>
-    <p>Alinhamento, desenho e cuidado para seu visual.</p>
-    <span class="price">R$ 25,00</span>
-   </article>
-   <article class="service">
-    <span class="number">03 / COMBO</span>
-    <h3>Corte + barba</h3>
-    <p>Uma experiência completa para renovar seu estilo.</p>
-    <span class="price">R$ 55,00</span>
-   </article>
-  </div>
-  <p style="text-align:center;color:#817d76;font-size:11px;margin-top:20px">*Preços ilustrativos para demonstração.</p>
- </div>
 </section>
 
-<section class="about" id="sobre">
- <div class="container about-grid">
-  <img class="about-photo" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=900" alt="Ambiente de barbearia">
-  <div class="about-text">
-   <div class="eyebrow">Nossa essência</div>
-   <h2>Estilo que vai além do <span>visual.</span></h2>
-   <p>A Barbearia Style representa uma nova forma de viver a experiência de cuidar do visual. Um espaço onde personalidade, técnica e atenção caminham juntas.</p>
-   <p>Cada detalhe importa. Cada cliente merece sair daqui com seu melhor estilo.</p>
-   <a class="btn" href="#contato">Encontre-nos ↗</a>
+<section id="sobre">
+  <div class="container about-grid">
+    <img class="about-image"
+      src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1000"
+      alt="Atendimento em uma barbearia">
+
+    <div class="about-text">
+      <div class="eyebrow">Nossa essência</div>
+      <h2>ESTILO QUE VAI ALÉM DO ESPELHO.</h2>
+      <p>
+        A Barbearia Style representa uma nova forma de cuidar
+        da aparência, valorizando personalidade e autenticidade.
+      </p>
+      <p>
+        Um ambiente moderno, atendimento atencioso e dedicação
+        aos detalhes fazem parte da nossa proposta.
+      </p>
+      <a href="#contato" class="button">FALE CONOSCO ↗</a>
+    </div>
   </div>
- </div>
 </section>
 
-<section id="galeria">
- <div class="container">
-  <div class="section-head">
-   <div class="eyebrow">Inspiração</div>
-   <h2>Nosso <span>estilo</span></h2>
-   <p>Uma seleção visual para inspirar seu próximo visual.</p>
-  </div>
-  <div class="gallery-grid">
-   <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600" alt="Barbearia moderna">
-   <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600" alt="Corte masculino">
-   <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600" alt="Barbeiro trabalhando">
-   <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600" alt="Cuidado masculino">
-   <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=600" alt="Barbearia">
-   <img src="https://images.unsplash.com/photo- barber" alt="Estilo masculino">
-  </div>
- </div>
-</section>
+<section class="gallery" id="galeria">
+  <div class="container">
+    <div class="section-title">
+      <small>Nosso ambiente</small>
+      <h2>GALERIA STYLE</h2>
+      <p>Um espaço pensado para sua experiência.</p>
+    </div>
 
-<section class="cta">
- <div class="eyebrow">Seu próximo visual começa aqui</div>
- <h2>Pronto para renovar seu <span>estilo?</span></h2>
- <p>Conheça nossos serviços e descubra uma nova experiência.</p>
- <a href="#contato" class="btn">Ver localização ↗</a>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800"
+        alt="Corte de cabelo masculino">
+      <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800"
+        alt="Ambiente de barbearia">
+      <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800"
+        alt="Serviço de barbearia">
+    </div>
+  </div>
 </section>
 
 <section class="contact" id="contato">
- <div class="container">
-  <div class="section-head">
-   <div class="eyebrow">Venha nos conhecer</div>
-   <h2>Estamos por <span>aqui.</span></h2>
-   <p>Consulte os horários e encontre nossa localização.</p>
-  </div>
-  <div class="contact-grid">
-   <div class="contact-info">
-    <h3>Informações</h3>
-    <div class="info-item">
-     <strong>LOCALIZAÇÃO</strong>
-     <span>Endereço demonstrativo — personalize para o cliente.</span>
+  <div class="container">
+    <div class="eyebrow">Vamos conversar?</div>
+
+    <div class="section-title">
+      <h2>SEU PRÓXIMO VISUAL COMEÇA AQUI.</h2>
     </div>
-    <div class="info-item">
-     <strong>HORÁRIOS</strong>
-     <span>Segunda a sábado: 09h às 19h</span>
-    </div>
-    <div class="info-item">
-     <strong>CONTATO</strong>
-     <span>Contato configurável na versão do cliente.</span>
-    </div>
+
+    <p class="contact-description">
+      Entre em contato para consultar horários e agendar
+      seu atendimento.
+    </p>
+
+    <a href="#contato" class="button">AGENDAMENTO DEMONSTRATIVO</a>
+
     <div class="socials">
-     <a class="social instagram" href="https://www.instagram.com/" target="_blank" rel="noopener">◎ Instagram</a>
-     <a class="social whatsapp" href="#contato">◉ WhatsApp</a>
+      <a class="social instagram" href="https://instagram.com/"
+        target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
+        </svg>
+        Instagram
+      </a>
+
+      <a class="social whatsapp" href="#contato">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8.9-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.3.1-.5l.4-.4c.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5s-.5-1.3-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 3.9 3.4 2.3.9 2.3.6 2.7.6.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z"/>
+        </svg>
+        WhatsApp
+      </a>
+
+      <a class="social maps"
+        href="https://www.google.com/maps/search/?api=1&query=barbearia"
+        target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+        </svg>
+        Localização
+      </a>
     </div>
-   </div>
-   <iframe class="map" title="Mapa demonstrativo" loading="lazy" src="https://maps.google.com/maps?q=barbearia&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
   </div>
- </div>
 </section>
+
 </main>
 
 <footer>
- <div class="container">© 2026 <span>Barbearia Style.</span> Projeto demonstrativo desenvolvido pela Nóriva Digital.</div>
+  <div class="container">
+    © 2026 Barbearia Style — Projeto demonstrativo desenvolvido
+    pela Nóriva Digital.
+  </div>
 </footer>
 
-<a class="float-wa" href="#contato" aria-label="Contato pelo WhatsApp">◉</a>
+<div class="float-buttons">
+  <a class="float-button float-ig"
+    href="https://instagram.com/"
+    target="_blank" rel="noopener"
+    aria-label="Instagram">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+    </svg>
+  </a>
+
+  <a class="float-button float-wa"
+    href="#contato"
+    aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20z"/>
+    </svg>
+  </a>
+</div>
 
 <script>
-const menuBtn=document.getElementById('menuBtn');
-const menu=document.getElementById('menu');
-menuBtn.addEventListener('click',()=>{
- menu.classList.toggle('active');
- menuBtn.textContent=menu.classList.contains('active')?'✕':'☰';
+const menuButton = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuButton.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('active');
+  menuButton.setAttribute('aria-expanded', isOpen);
+  menuButton.setAttribute(
+    'aria-label',
+    isOpen ? 'Fechar menu' : 'Abrir menu'
+  );
+  menuButton.textContent = isOpen ? '✕' : '☰';
 });
-menu.querySelectorAll('a').forEach(link=>{
- link.addEventListener('click',()=>{
-  menu.classList.remove('active');
-  menuBtn.textContent='☰';
- });
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Abrir menu');
+    menuButton.textContent = '☰';
+  });
 });
 </script>
+
 </body>
 </html>
